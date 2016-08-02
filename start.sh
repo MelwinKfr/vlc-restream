@@ -18,4 +18,4 @@ elif [[ $FORMAT == 'webm' ]]; then
     ext='.webm'
 fi
 
-cvlc $FLUX_URL :sout="#transcode{vcodec=$vcodec,vb=800$width}:http{dst=$port/stream$ext}"
+cvlc -I dummy $INPUT :sout="#transcode{vcodec=$vcodec,vb=800$width}:http{dst=$port/stream$ext}"
